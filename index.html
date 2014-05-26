@@ -89,6 +89,13 @@
 		        'Hello, ' + response.name;
 		      document.getElementById('main-subtitle').innerHTML =
 		        'After connecting with Facebook, I know that your email is ' + response.email +'... right?';
+		      document.getElementById('login-text').innerHTML =
+		        'Logout ('+response.name+')';
+		      document.getElementById('login-text').removeAttribute("href");
+		      document.getElementById('login-text').onclick = FB.logout(function(response) {
+		      	
+		      });
+
 		    });
 		  }
 		</script>
@@ -110,7 +117,7 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<!-- Links here -->
 		    	<ul class="nav navbar-nav navbar-right">
-        		<li><a href="https://www.facebook.com/dialog/oauth?client_id=1485607241670566&scope=public_profile,email&redirect_uri=http://davidlago.info">Login</a></li>	
+        		<li><a href="https://www.facebook.com/dialog/oauth?client_id=1485607241670566&scope=public_profile,email&redirect_uri=http://davidlago.info" id="login-text">Login</a></li>	
       		</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
