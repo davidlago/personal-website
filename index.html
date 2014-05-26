@@ -85,8 +85,10 @@
 		    console.log('Welcome!  Fetching your information.... ');
 		    FB.api('/me', function(response) {
 		      console.log('Successful login for: ' + response.name);
-		      document.getElementById('status').innerHTML =
-		        'Thanks for logging in, ' + response.name + '! Your email is ' + response.email + '... right?';
+		      document.getElementById('main-title').innerHTML =
+		        'Hello, ' + response.name;
+		      document.getElementById('main-subtitle').innerHTML =
+		        'After connecting with Facebook, I know that your email is ' + response.email +'... right?';
 		    });
 		  }
 		</script>
@@ -101,26 +103,27 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#">David Lago's personal website</a>
+		      <a class="navbar-brand" href="#">David Lago</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		    	<!-- Links here -->
+		    	<ul class="nav navbar-nav navbar-right">
+        		<li><a href="https://www.facebook.com/dialog/oauth?client_id=1485607241670566&scope=public_profile,email&redirect_uri=http://davidlago.info">Login</a></li>	
+      		</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 
 		<div class="container">
 
-			<a href="https://www.facebook.com/dialog/oauth?client_id=1485607241670566&scope=public_profile,email&redirect_uri=http://davidlago.info">Login</a>
-
 			<div id="status">
 			</div>
 
 			<div class="jumbotron">
-	  			<h2>Website under construction</h2>
-	 			<p>This domain will host my personal website, and it's currently under construction. Check back again soon!</p>
+	  			<h2 id="main-title">Website under construction</h2>
+	 				<p id="main-subtitle">This domain will host my personal website, and it's currently under construction. Check back again soon!</p>
 			</div>
 		</div>
 		
