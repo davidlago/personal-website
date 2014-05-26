@@ -86,15 +86,16 @@
 		    FB.api('/me', function(response) {
 		      console.log('Successful login for: ' + response.name);
 		      document.getElementById('main-title').innerHTML =
-		        'Hello, ' + response.name;
+		        'Hello, ' + response.name + '!';
 		      document.getElementById('main-subtitle').innerHTML =
 		        'After connecting with Facebook, I know that your email is ' + response.email +'... right?';
 		      document.getElementById('login-text').innerHTML =
 		        'Logout ('+response.name+')';
 		      document.getElementById('login-text').removeAttribute("href");
-		      document.getElementById('login-text').onclick = FB.logout(function(response) {
-		      	
-		      });
+
+		      document.getElementById('login-text').addAttribute("onclick","FB.logout(function(response) {
+
+		      });");
 
 		    });
 		  }
