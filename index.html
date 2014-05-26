@@ -91,12 +91,7 @@
 		        'After connecting with Facebook, I know that your email is ' + response.email +'... right?';
 		      document.getElementById('login-text').innerHTML =
 		        'Logout ('+response.name+')';
-		      $('#login-text').prop("href", "");
-		      $('#login-text').click(function() {
-		      	FB.logout(function(response) {
-  						// user is now logged out
-						});
-		      });
+		      $('#login-text').prop("href", "javascript:FB.logout(function(response) {});");
 
 		    });
 		  }
