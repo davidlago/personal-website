@@ -1,0 +1,31 @@
+body {
+  font-family: 'Ubuntu Mono';
+  font-size: 1.2em;
+  margin: 20px 20px;
+}
+
+.avatar {
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 3px 3px 12px #666;
+  -moz-box-shadow: 3px 3px 12px #666;
+  box-shadow: 3px 3px 12px #666;
+}
+
+#main-content {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#main-content p {
+  margin-top: 30px;
+}
