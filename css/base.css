@@ -35,3 +35,25 @@ html {
   -moz-box-shadow: 3px 3px 12px #666;
   box-shadow: 3px 3px 12px #666;
 }
+
+
+/* Tablets & iPhone 6/6 Plus */
+@media only screen
+  and (max-device-width: 736px) {
+  html {
+    margin: 5px 5px;
+  }
+  .info-card {
+    width: auto;
+  }
+}
+
+/* iPhone 5 and smaller */
+@media only screen and (max-device-width: 320px) {
+  html {
+    font-size: 1em;
+  }
+  .info-card img {
+    width: 150px;
+  }
+}
