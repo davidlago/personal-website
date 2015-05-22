@@ -2,7 +2,7 @@ html {
   background: url(../img/background.png) no-repeat center center fixed; 
   background-size: cover;
   font-family: 'Ubuntu Mono';
-  font-size: 1.2em;
+  font-size: 14pt;
   margin: 20px 20px;
 }
 
@@ -11,7 +11,7 @@ html {
   width: 350px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 1px 20px 1px 20px;
   text-align: center;
   box-shadow: 3px 3px 12px rgb(80,80,80);
   -moz-border-radius: 10px;
@@ -20,7 +20,7 @@ html {
 }
 
 .info-card p {
-  margin-top: 30px;
+  margin-top: 36px;
 }
 
 .info-card img {
@@ -36,6 +36,16 @@ html {
   box-shadow: 3px 3px 12px #666;
 }
 
+.info-card h1 {
+  font-size: 32pt;
+  font-weight: 100;
+}
+
+.link-bar {
+  margin-top: 36px;
+  font-size: 12pt;
+}
+
 
 /* Tablets & iPhone 6/6 Plus */
 @media only screen
@@ -46,14 +56,22 @@ html {
   .info-card {
     width: auto;
   }
+
+  .info-card h1 {
+    font-size: 28pt;
+  }
 }
 
 /* iPhone 5 and smaller */
 @media only screen and (max-device-width: 320px) {
   html {
-    font-size: 1em;
+    font-size: 12pt;
   }
   .info-card img {
     width: 150px;
+  }
+
+  .link-bar {
+    font-size: 10pt;
   }
 }
